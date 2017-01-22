@@ -1,4 +1,4 @@
-# Software University 2015
+# Software University 2017
 <p align="center"><a href="https://softuni.bg/"><img src="https://softuni.bg/Files/UserFiles/ImageGallery/softuni-2.0.jpg" alt="" width="403" height="403" /> </a></p>
 
 <h2> Programming Fundamentals </h2>
