@@ -3,6 +3,6 @@
 
 <h2> Programming Fundamentals </h2>
 
-1. <a href="https://github.com/badjok3/creative-title/tree/master/dataTypes> Data types and Variables - </a> (<a href="https://github.com/badjok3/creative-title/blob/master/dataTypes/README.md>assingnment</a>) <br>
+1. <a href="https://github.com/badjok3/creative-title/tree/master/dataTypes"> Data types and Variables </a> - (<a href="https://github.com/badjok3/creative-title/blob/master/dataTypes/README.md">assingnment</a>) <br>
 
-2.<a href="https://github.com/badjok3/creative-title/tree/master/dataTypesExercise> Exercises: Data types and Variables </a> - (<a href="https://github.com/badjok3/creative-title/blob/master/dataTypesExercise/README.md>assignment</a>)
+2.<a href="https://github.com/badjok3/creative-title/tree/master/dataTypesExercise"> Exercises: Data types and Variables </a> - (<a href="https://github.com/badjok3/creative-title/blob/master/dataTypesExercise/README.md">assignment</a>)
