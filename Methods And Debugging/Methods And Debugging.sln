@@ -19,6 +19,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.Greater Of Two Values", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.Multiply Evens By Odds", "08.Multiply Evens By Odds\08.Multiply Evens By Odds.csproj", "{33EE7667-B5E8-4B7C-9297-94D938B1B2C4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09.Debug the Code - Holidays Between Two Dates", "Debug the Code - Holidays Between Two Dates\09.Debug the Code - Holidays Between Two Dates.csproj", "{413E3110-48ED-4C43-BDD7-6980C6A09703}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10.Price Change Alert", "10.Price Change Alert\10.Price Change Alert.csproj", "{59DF112B-86AC-49FB-84AD-34E01C1A4D66}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +61,14 @@ Global
 		{33EE7667-B5E8-4B7C-9297-94D938B1B2C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33EE7667-B5E8-4B7C-9297-94D938B1B2C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33EE7667-B5E8-4B7C-9297-94D938B1B2C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{413E3110-48ED-4C43-BDD7-6980C6A09703}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{413E3110-48ED-4C43-BDD7-6980C6A09703}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{413E3110-48ED-4C43-BDD7-6980C6A09703}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{413E3110-48ED-4C43-BDD7-6980C6A09703}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59DF112B-86AC-49FB-84AD-34E01C1A4D66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59DF112B-86AC-49FB-84AD-34E01C1A4D66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59DF112B-86AC-49FB-84AD-34E01C1A4D66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59DF112B-86AC-49FB-84AD-34E01C1A4D66}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
