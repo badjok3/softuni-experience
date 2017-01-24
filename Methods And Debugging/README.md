@@ -33,11 +33,11 @@ You are assigned to find and fix the bugs in an existing piece of code, using th
 You are given a program (existing source code) that aims to count the non-working days between two dates given in format day.month.year (e.g. between 1.05.2015 and 15.05.2015 there are 5 non-working days – Saturday and Sunday).
 
 You can find the broken code here: (<a href="https://github.com/badjok3/creative-title/blob/master/brokenCode/09.Holidays%20Between%20Two%20Dates/Program.cs">Broken Code</a>) <br>
-You can find the working code here: (Working Code)
+You can find the working code here: (<a href="https://github.com/badjok3/creative-title/blob/master/Methods%20And%20Debugging/Debug%20the%20Code%20-%20Holidays%20Between%20Two%20Dates/Program.cs">Working Code</a>)
 
 10 - Price Change Alert
 You are assigned to rework a given piece of code which is working without bugs but is not properly formatted. 
 The given program tracks stock prices and gives updates about the significance in each price change. Based on the significance, there are four kind of changes: no change at all (price is equal to the previous), minor (difference is below the significance threshold), price up and price down.
 
 You can find the broken code here: (<a href="https://github.com/badjok3/creative-title/blob/master/brokenCode/10.Price%20Change%20Alert/Program.cs">Broken Code</a>) <br>
-You can find the working code here: (Working Code)
+You can find the working code here: (<a href="https://github.com/badjok3/creative-title/blob/master/Methods%20And%20Debugging/10.Price%20Change%20Alert/Program.cs">Working Code</a>)
