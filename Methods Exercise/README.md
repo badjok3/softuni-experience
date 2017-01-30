@@ -1,4 +1,4 @@
-1 -	Hello, Name!
+1.	Hello, Name!
 Write a method that receives a name as parameter and prints on the console. “Hello, <name>!”
 
 2.	Max Method
