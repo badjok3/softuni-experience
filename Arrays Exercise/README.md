@@ -22,8 +22,8 @@ Write a program that finds the longest sequence of equal elements in an array of
 Write a program that finds the longest increasing subsequence in an array of integers. The longest increasing subsequence is a portion of the array (subsequence) that is strongly increasing and has the longest possible length. If several such subsequences exist, find the left most of them.
 
 8.	Most Frequent Number
-Write a program that finds the most frequent number in a given sequence of numbers. 
-•	Numbers will be in the range [0…65535].
+Write a program that finds the most frequent number in a given sequence of numbers. <br>
+•	Numbers will be in the range [0…65535].<br>
 •	In case of multiple numbers with the same maximal frequency, print the leftmost of them.
 
 9.	Index of Letters
