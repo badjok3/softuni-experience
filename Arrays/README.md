@@ -26,3 +26,12 @@ Write a program to read an array of strings, reverse it and print its elements. 
 7.	Sum Arrays
 Write a program that reads two arrays of integers and sums them. When the arrays are not of the same size, duplicate the smaller array a few times.
 
+8.	Condense Array to Number
+Write a program to read an array of integers and condense them by summing adjacent couples of elements until a single integer is obtained. For example, if we have 3 elements {2, 10, 3}, we sum the first two and the second two elements and obtain {2+10, 10+3} = {12, 13}, then we sum again all adjacent elements and obtain {12+13} = {25}.
+
+9.	Extract Middle 1, 2 or 3 Elements
+Write a method to extract the middle 1, 2 or 3 elements from array of n integers and print them. <br>
+•	n = 1 -> 1 element <br>
+•	even n -> 2 elements <br>
+•	odd n -> 3 elements <br>
+Create a program that reads an array of integers (space separated values) and prints the middle elements.
