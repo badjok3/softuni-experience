@@ -1,27 +1,23 @@
 ﻿namespace _07.Sum_Arrays
 {
     using System;
+    using System.Linq;
 
-   public class SumArrays
+    public class SumArrays
     {
-       public static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            var firstValues = Console.ReadLine();
-            var secondValues = Console.ReadLine();
+            var firstValues = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+            var secondValues = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+            var length = Math.Max(firstValues.Length, secondValues.Length);
+            var result = new int[length];
 
-            var firstArr = firstValues.Split(' ');
-            var secondArr = secondValues.Split(' ');
-            var intArray = new int[firstArr.Length];
-            var secondArray = new int[secondArr.Length];
-
-            for (int i = 0; i < firstArr.Length; i++)
+            for (int i = 0; i < length; i++)
             {
-                intArray[i] = int.Parse(firstArr[i]);
+                result[i] = firstValues[i % firstValues.Length] + secondValues[i % secondValues.Length];
             }
 
-
+            Console.WriteLine(string.Join(" ", result));
         }
-
-
     }
 }

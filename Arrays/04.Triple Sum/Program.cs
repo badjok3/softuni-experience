@@ -1,22 +1,33 @@
 ﻿namespace _04.Triple_Sum
 {
     using System;
+    using System.Linq;
 
     public class Program
     {
         public static void Main(string[] args)
         {
-            string values = Console.ReadLine();
-            var parameters = values.Split(' ');
-            var array = new int[parameters.Length];
+            var numbers = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+            bool hasSum = false;
 
-            for (int i = 0; i < array.Length; i++)
+            for (int a = 0; a < numbers.Length; a++)
             {
-                array[i] = int.Parse(parameters[i]);
+                for (int b = a + 1; b < numbers.Length; b++)
+                {
+                    var sum = numbers[a] + numbers[b];
+
+                    if (numbers.Contains(sum))
+                    {
+                        hasSum = true;
+                        Console.WriteLine($"{numbers[a]} + {numbers[b]} == {sum}");
+                    }
+                }
             }
 
+            if (!hasSum)
+            {
+                Console.WriteLine("No");
+            }
         }
-
-        public static int[] 
     }
 }
