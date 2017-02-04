@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.Phonebook", "01.Phonebook\01.Phonebook.csproj", "{C132D333-85E2-40E5-AD86-38534E0EDC95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.Phonebook Upgrade", "02.Phonebook Upgrade\02.Phonebook Upgrade.csproj", "{8612B901-1CFA-4535-8726-85A4B5B97199}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.A Miner Task", "03.A Miner Task\03.A Miner Task.csproj", "{E0A9B1C4-5F33-42B9-8B19-B963D3FA6618}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.Fix E-mails", "04.Fix E-mails\04.Fix E-mails.csproj", "{A14D77A1-0BC3-4501-9BC4-D50872D330F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.Hands Of Cards", "05.Hands Of Cards\05.Hands Of Cards.csproj", "{B55737EC-63E1-48B7-89F1-73E1131AA86F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C132D333-85E2-40E5-AD86-38534E0EDC95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C132D333-85E2-40E5-AD86-38534E0EDC95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C132D333-85E2-40E5-AD86-38534E0EDC95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C132D333-85E2-40E5-AD86-38534E0EDC95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8612B901-1CFA-4535-8726-85A4B5B97199}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8612B901-1CFA-4535-8726-85A4B5B97199}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8612B901-1CFA-4535-8726-85A4B5B97199}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8612B901-1CFA-4535-8726-85A4B5B97199}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0A9B1C4-5F33-42B9-8B19-B963D3FA6618}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0A9B1C4-5F33-42B9-8B19-B963D3FA6618}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0A9B1C4-5F33-42B9-8B19-B963D3FA6618}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0A9B1C4-5F33-42B9-8B19-B963D3FA6618}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A14D77A1-0BC3-4501-9BC4-D50872D330F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A14D77A1-0BC3-4501-9BC4-D50872D330F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A14D77A1-0BC3-4501-9BC4-D50872D330F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A14D77A1-0BC3-4501-9BC4-D50872D330F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B55737EC-63E1-48B7-89F1-73E1131AA86F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B55737EC-63E1-48B7-89F1-73E1131AA86F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B55737EC-63E1-48B7-89F1-73E1131AA86F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B55737EC-63E1-48B7-89F1-73E1131AA86F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
