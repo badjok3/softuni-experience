@@ -6,7 +6,7 @@
 
     public class AppendLists
     {
-        public static void Main(string[] args)
+        public static void Main()
         {
             string numbers = Console.ReadLine();
             AppendList(numbers);
@@ -14,21 +14,16 @@
 
         public static void AppendList(string numbers)
         {
-            var parameters = numbers.Split('|').ToList();
+            var parameters = numbers.Split(new[] { '|' }, StringSplitOptions.RemoveEmptyEntries).ToList();
             parameters.Reverse();
             var resultList = new List<int>();
 
             for (int i = 0; i < parameters.Count; i++)
             {
-                string currentString = parameters[i];
-                for (int j = 0; j < currentString.Length; j++)
+                var num = parameters[i].Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                for (int j = 0; j < num.Length; j++)
                 {
-                    char values = currentString[j];
-
-                    if (Char.IsDigit(values))
-                    {
-                        resultList.Add(values - '0');
-                    }
+                    resultList.Add(int.Parse(num[j]));
                 }
             }
             var result = string.Join(" ", resultList);

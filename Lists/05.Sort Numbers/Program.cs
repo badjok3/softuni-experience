@@ -6,7 +6,7 @@
 
     public class SortNumbers
     {
-       public static void Main(string[] args)
+       public static void Main()
         {
             string numbers = Console.ReadLine();
             SortNums(numbers);
@@ -14,7 +14,7 @@
 
         public static void SortNums(string numbers)
         {
-            var parameters = numbers.Split(' ').Select(long.Parse).ToList();
+            var parameters = numbers.Split(' ').Select(decimal.Parse).ToList();
             parameters.Sort();
             Console.Write(parameters[0]);
             for (int i = 1; i < parameters.Count; i++)
