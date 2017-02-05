@@ -16,11 +16,11 @@ Write a program to read n integers and print their sum, min, max, first, last an
 4 -	Largest 3 Numbers
 Read a list of real numbers and print largest 3 of them. If less than 3 numbers exit, print all of them.
 
-5.	Short Words Sorted
+5 -	Short Words Sorted
 Read a text, extract its words, find all short words (less than 5 characters) and print them alphabetically, in lowercase.<br>
 •	Use the following separators: . , : ; ( ) [ ] " ' \ / ! ? (space).<br>
 •	Use case-insensitive matching.<br>
 •	Remove duplicated words.
 
-6.	Fold and Sum
+6 -	Fold and Sum
 Read an array of 4*k integers, fold it like shown below, and print the sum of the upper and lower rows (2*k integers).
