@@ -37,3 +37,18 @@ For example, given the following input - IP=192.23.30.40 message='Hello&derps.' 
 destroyer: <br>
 192.23.30.40 => 1.<br>
 The username destroyer has sent a message from IP 192.23.30.40 once.
+
+7.	* Population Counter
+So many people! It’s hard to count them all. But that’s your job as a statistician. You get raw data for a given city and you need to aggregate it. 
+On each input line you’ll be given data in format: "city|country|population". There will be no redundant whitespaces anywhere in the input. Aggregate the data by country and by city and print it on the console. For each country, print its total population and on separate lines the data for each of its cities. Countries should be ordered by their total population in descending order and within each country, the cities should be ordered by the same criterion. If two countries/cities have the same population, keep them in the order in which they were entered.
+
+8.	* Logs Aggregator
+You are given a sequence of access logs in format <IP> <user> <duration>. Write a program to aggregate the logs data and print for each user the total duration of his sessions and a list of unique IP addresses in format "<user>: <duration> [<IP1>, <IP2>, …]". Order the users alphabetically. Order the IPs alphabetically. 
+
+9.	* Legendary Farming
+You’ve beaten all the content and the last thing left to accomplish is own a legendary item. However, it’s a tedious process and requires quite a bit of farming. Anyway, you are not too pretentious – any legendary will do. The possible items are:<br>
+•	Shadowmourne – requires 250 Shards;<br>
+•	Valanyr – requires 250 Fragments;<br>
+•	Dragonwrath – requires 250 Motes;<br>
+Shards, Fragments and Motes are the key materials, all else is junk. You will be given lines of input, such as 
+2 motes 3 ores 15 stones. Keep track of the key materials - the first that reaches the 250 mark wins the race. At that point, print the corresponding legendary obtained. Then, print the remaining shards, fragments, motes, ordered by quantity in descending order, then by name in ascending order, each on a new line. Finally, print the collected junk items, in alphabetical order.
