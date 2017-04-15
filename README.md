@@ -17,6 +17,6 @@
 13.<a href="https://github.com/badjok3/creative-title/tree/master/Files%20and%20Exceptions"> Files and Exceptions </a> - (<a href="https://github.com/badjok3/creative-title/blob/master/Files%20and%20Exceptions/README.md">assignment</a>) - 08.02.2017<br>
 14.<a href="https://github.com/badjok3/creative-title/tree/master/String%20and%20Text%20Processing"> Strings and Text Processing </a> - (<a href="https://github.com/badjok3/creative-title/blob/master/String%20and%20Text%20Processing/README.md">assignment</a>) - 13.02.2017<br>
 15.<a href="https://github.com/badjok3/creative-title/tree/master/Strings%20and%20Text%20Processing%20Exercise"> Exercises: String and Text Processing</a> - (<a href="https://github.com/badjok3/creative-title/blob/master/Strings%20and%20Text%20Processing%20Exercise/README.md">assignment</a>) - 14.02.2017<br>
-16.<a href="https://github.com/badjok3/creative-title/tree/master/Regular%20Expressions">Regular Expressions</a> - (<a href="https://github.com/badjok3/creative-title/blob/master/Regular%20Expressions/README.md">assignment</a>) - 15.02.2017, 16.02.2017<br>
+16.<a href="https://github.com/badjok3/creative-title/tree/master/Regular%20Expressions"> Regular Expressions</a> - (<a href="https://github.com/badjok3/creative-title/blob/master/Regular%20Expressions/README.md">assignment</a>) - 15.02.2017, 16.02.2017<br>
 17.<a href="https://github.com/badjok3/creative-title/tree/master/Exam%20Prep"> Exam Preparation </a>
 </p>
