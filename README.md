@@ -22,7 +22,7 @@
 </p>
 
 <h2> Programming Fundamentals JavaScript</h2>
-1.<a href="https://github.com/badjok3/creative-title/tree/master/JavaScript/01.Intro"> Intro </a> - 22.05.2017<br>
-2.<a href="https://github.com/badjok3/creative-title/tree/master/JavaScript/02.Control%20Flow%20Logic"> Control Flow Logic </a> - 23.05.2017<br>
-3.<a href="https://github.com/badjok3/creative-title/tree/master/JavaScript/03.Expressions%2C%20Conditional%20Statements%20and%20Loops"> Expressions, Conditional Statements and Loops </a> - 25.05.2017<br>
-4.<a href="https://github.com/badjok3/creative-title/tree/master/JavaScript/04.Functions"> Functions </a> 26.05.2017<br>
+1.<a href="https://github.com/badjok3/creative-title/tree/master/JavaScript/01.Intro"> Intro </a> - (<a href="https://github.com/badjok3/creative-title/blob/master/JavaScript/01.Intro/README.md">assignment</a>) - 22.05.2017<br>
+2.<a href="https://github.com/badjok3/creative-title/tree/master/JavaScript/02.Control%20Flow%20Logic"> Control Flow Logic </a> - (<a href="https://github.com/badjok3/creative-title/blob/master/JavaScript/02.Control%20Flow%20Logic/README.md">assignment</a>) - 23.05.2017<br>
+3.<a href="https://github.com/badjok3/creative-title/tree/master/JavaScript/03.Expressions%2C%20Conditional%20Statements%20and%20Loops"> Expressions, Conditional Statements and Loops </a> - (<a href="https://github.com/badjok3/creative-title/blob/master/JavaScript/03.Expressions%2C%20Conditional%20Statements%20and%20Loops/README.md">assignment</a>) - 25.05.2017<br>
+4.<a href="https://github.com/badjok3/creative-title/tree/master/JavaScript/04.Functions"> Functions </a> - (<a href="https://github.com/badjok3/creative-title/blob/master/JavaScript/04.Functions/README.md">assignment</a>) - 26.05.2017<br>
