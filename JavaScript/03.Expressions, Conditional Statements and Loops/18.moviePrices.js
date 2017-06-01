@@ -2,7 +2,7 @@ function moviePrices(args) {
     let movie = args[0].toLowerCase();
     let day = args[1].toLowerCase();
 
-    if(movie == 'the godfather') {
+    if(movie === 'the godfather') {
         switch(day) {
             case 'monday': console.log('12'); break;
             case 'tuesday': console.log('10'); break;
@@ -13,7 +13,7 @@ function moviePrices(args) {
             case 'sunday': console.log('30'); break;
             default: console.log('error');
         }
-    } else if (movie == 'schindler\'s list') {
+    } else if (movie === 'schindler\'s list') {
          switch(day) {
             case 'monday': console.log('8.50'); break;
             case 'tuesday': console.log('8.50'); break;
@@ -24,7 +24,7 @@ function moviePrices(args) {
             case 'sunday': console.log('15'); break;
             default: console.log('error');
         }
-    } else if (movie == 'casablanca') {
+    } else if (movie === 'casablanca') {
          switch(day) {
             case 'monday': console.log('8'); break;
             case 'tuesday': console.log('8'); break;
@@ -35,7 +35,7 @@ function moviePrices(args) {
             case 'sunday': console.log('10'); break;
             default: console.log('error');
         }
-    } else if (movie == 'the wizard of oz') {
+    } else if (movie === 'the wizard of oz') {
         switch(day) {
             case 'monday': console.log('10'); break;
             case 'tuesday': console.log('10'); break;
