@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Time Converter</title>
+    <style>
+        label, input {
+            display: inline-block;
+            width: 5em;
+        }
+
+        label {
+            text-align: right;
+        }
+    </style>
+</head>
+<body onload="attachEventsListeners()">
+<h1>Time Converter</h1>
+<div>
+    <label for="days">Days: </label>
+    <input type="text" id="days">
+    <input id="daysBtn" type="button" value="Convert">
+</div>
+<div>
+    <label for="hours">Hours: </label>
+    <input type="text" id="hours">
+    <input id="hoursBtn" type="button" value="Convert">
+</div>
+<div>
+    <label for="minutes">Minutes: </label>
+    <input type="text" id="minutes">
+    <input id="minutesBtn" type="button" value="Convert">
+</div>
+<div>
+    <label for="seconds">Seconds: </label>
+    <input type="text" id="seconds">
+    <input id="secondsBtn" type="button" value="Convert">
+</div>
+<script>
+    function attachEventsListeners() {
+        let days = document.getElementById('days');
+        let daysBtn = document.getElementById('daysBtn');
+        let hours = document.getElementById('hours');
+        let hoursBtn = document.getElementById('hoursBtn');
+        let minutes = document.getElementById('minutes');
+        let minutesBtn = document.getElementById('minutesBtn');
+        let seconds = document.getElementById('seconds');
+        let secondsBtn = document.getElementById('secondsBtn');
+
+        daysBtn.addEventListener('click', function () {
+            days.value = +days.value;
+            hours.value = +days.value * 24;
+            minutes.value = +days.value * 24 * 60;
+            seconds.value = +days.value * 24 * 60 * 60;
+        });
+
+        hoursBtn.addEventListener('click', function () {
+            days.value = +hours.value / 24;
+            hours.value = +hours.value;
+            minutes.value = +hours.value * 60;
+            seconds.value = +hours.value * 60 * 60;
+        });
+
+        minutesBtn.addEventListener('click', function () {
+            days.value = +minutes.value / 24 / 60;
+            hours.value = +minutes.value / 60;
+            minutes.value = +minutes.value;
+            seconds.value = +minutes.value * 60;
+        });
+
+        secondsBtn.addEventListener('click', function () {
+            days.value = +seconds.value / 24 / 60 / 60;
+            hours.value = +seconds.value / 60 / 60;
+            minutes.value = +seconds.value / 60;
+            seconds.value = +seconds.value;
+        });
+    }
+</script>
+</body>
+</html>
