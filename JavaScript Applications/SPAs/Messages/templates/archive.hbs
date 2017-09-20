@@ -1,0 +1,32 @@
+{{#if loggedIn}}
+    <section id="viewArchiveSent">
+        <h1>Archive (Sent Messages)</h1>
+        <div class="messages" id="sentMessages">
+            <table>
+                <thead>
+                <tr>
+                    <th>To</th>
+                    <th>Message</th>
+                    <th>Date Sent</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                {{#each currentSentMessages}}
+                    <tr data-id="{{_id}}">
+                        <td>{{recipient}}</td>
+                        <td>{{content}}</td>
+                        <td>{{date}}</td>
+                        <td>
+                            <button>Delete</button>
+                        </td>
+                    </tr>
+                {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+{{else}}
+    <p>Sorry, you're not authorized. Please <a href="#/login">Login</a> to view this page. If you don't have an account, you can <a href="#/register">create an account</a>.</p>
+{{/if}}

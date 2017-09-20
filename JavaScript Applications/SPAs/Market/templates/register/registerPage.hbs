@@ -1,0 +1,8 @@
+{{#if isLogged}}
+    <p>You are already logged in.</p>
+{{else}}
+    <section id="viewRegister">
+        <h1>Please register here</h1>
+        {{> registerForm}}
+    </section>
+{{/if}}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+<h1>All Posts</h1>
+<button id="btnLoadPosts">Load Posts</button>
+<select id="posts"></select>
+<button id="btnViewPost">View</button>
+<h1 id="post-title">Post Details</h1>
+<ul id="post-body"></ul>
+<h2>Comments</h2>
+<ul id="post-comments"></ul>
+<script>
+    $(function attachEvents() {
+        const kinveyAppId = "kid_S12g5Xa8W";
+        const serviceUrl = "https://baas.kinvey.com/appdata/" + kinveyAppId;
+        const kinveyUsername = "peter";
+        const kinveyPassword = "p";
+        const base64auth = btoa(kinveyUsername + ":" + kinveyPassword);
+        const authHeaders = {"Authorization": "Basic " + base64auth};
+
+        $('#btnLoadPosts').click(loadPostsClick);
+        // ---------------- Edited ----------------
+        // ('#btnViewPosts').click(viewPostClick); to ('#btnViewPost').click(viewPostClick);
+        // ID of button was wrong
+        $('#btnViewPost').click(viewPostClick);
+
+
+        function loadPostsClick() {
+            let loadPostRequest = {
+                method: "GET",
+                // ---------------- Edited ----------------
+                // when making a GET request to kinvey, it should never end with '/'
+                // changed url: serviceUrl + "/posts/", to url: serviceUrl + "/posts",
+                url: serviceUrl + "/posts",
+                headers: authHeaders
+            };
+            $.ajax(loadPostRequest)
+                .then(displayPosts)
+                .catch(displayError)
+        }
+
+        function displayPosts(posts) {
+            $('#posts').empty();
+            for (let post of posts) {
+                $('#posts').append($('<option>').text(post.title).val(post._id))
+            }
+        }
+
+        function viewPostClick() {
+            // ---------------- Edited selectedPostID----------------
+            // $('#posts').val(); to $('#posts option:selected').val();
+            // now the postID is only the ID of the selected option element
+            let selectedPostID = $('#posts option:selected').val();
+            if (!selectedPostID) {
+                return;
+            }
+
+            let requestPost = $.ajax({
+                method: "GET",
+                url: serviceUrl + "/posts/" + selectedPostID,
+                headers: authHeaders
+            });
+            let requestComments = $.ajax({
+                url: serviceUrl + `/comments/?query={"post_id":"${selectedPostID}"}`,
+                headers: authHeaders
+            });
+
+            Promise.all([requestPost, requestComments])
+                .then(displayPostWithComments)
+                .catch(displayError);
+        }
+
+        function displayPostWithComments([post, comments]) {
+            $('#post-title').text(post.title);
+            $('#post-body').text(post.body);
+            $('#post-comments').empty();
+
+            for (let comment of comments) {
+                $('#post-comments').append($("<li>").text(comment.text))
+            }
+        }
+
+        function displayError(err) {
+            let errDiv = $('<div>').text("Error: " + err.status + " (" + err.statusText + ")");
+            $(document.body).prepend(errDiv);
+            // ---------------- Edited ----------------
+            // removed timeout, due to judge timer
+        }
+
+    });
+</script>
+</body>
+</html>

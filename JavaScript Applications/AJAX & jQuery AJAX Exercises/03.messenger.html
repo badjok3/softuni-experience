@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Messenger</title>
+    <style>
+        label {
+            display: inline-block;
+            width: 5em;
+        }
+
+        #author, #content {
+            width: 30em;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+<body onload="attachEvents()">
+<div id="main">
+    <textarea id="messages" cols="80" rows="12" disabled="true"></textarea>
+    <div id="controls">
+        <label for="author">Name: </label><input id="author" type="text"><br>
+        <label for="content">Message: </label><input id="content" type="text">
+        <input id="submit" type="button" value="Send">
+        <input id="refresh" type="button" value="Refresh">
+    </div>
+</div>
+<script src="solution.js"></script>
+<script>
+    function attachEvents() {
+        $('#refresh').on('click', displayMessages);
+
+        $('#submit').on('click', function () {
+            let messageJSON = {
+                "author": $('#author').val(),
+                "content": $('#content').val(),
+                "timestamp": Date.now()
+            };
+
+            let messageRequest = {
+                method: "POST",
+                url: `https://messenger-3e459.firebaseio.com/.json`,
+                data: JSON.stringify(messageJSON),
+                success: displayMessages()
+            };
+
+            $.ajax(messageRequest);
+        });
+
+        function displayMessages() {
+            $.get(`https://messenger-3e459.firebaseio.com/.json`, function (parameters) {
+                let messageBoard = $('#messages');
+                messageBoard.empty();
+                let currentMessages = '';
+                for (let data in parameters) {
+                    currentMessages += `${parameters[data]["author"]}: ${parameters[data]["content"]}` + '\n';
+                }
+                messageBoard.text(currentMessages);
+            });
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phonebook</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+<h1>Phonebook</h1>
+<ul id="phonebook"></ul>
+<button id="btnLoad">Load</button>
+
+<h2>Create Contact</h2>
+Person: <input type="text" id="person"/>
+<br>
+Phone: <input type="text" id="phone"/>
+<br>
+<button id="btnCreate">Create</button>
+<script src="phonebook.js"></script>
+<script>
+    $(function attachEvents() {
+        $("#btnLoad").click(loadBook);
+        $("#btnCreate").click(createContact);
+
+        function createContact() {
+            let contactJSON = {
+                person: $("#person").val(),
+                phone: $("#phone").val()
+            };
+
+            $('#person').val('');
+            $('#phone').val('');
+
+            let createRequest = {
+                url: "https://phonebook-nakov.firebaseio.com/phonebook.json",
+                method: "POST",
+                data: JSON.stringify(contactJSON),
+                success: loadBook,
+            };
+
+            $.ajax(createRequest);
+        }
+
+        function loadBook() {
+            let loadRequest = {
+                method: "GET",
+                url: "https://phonebook-nakov.firebaseio.com/phonebook.json",
+                success: showPhoneBook,
+            };
+
+            $.ajax(loadRequest);
+        }
+
+        function showPhoneBook(allContacts) {
+            let phonebook = $("#phonebook");
+            phonebook.empty();
+
+            for (let contact in allContacts) {
+                let person = allContacts[contact]['person'];
+                let phone = allContacts[contact]['phone'];
+                let btnDelete = $('<button>[Delete]</button>')
+                    .on('click', deleteContact.bind(this, contact));
+
+                let elem = $('<li>')
+                    .text(`${person}: ${phone} `)
+                    .append(btnDelete);
+                phonebook.append(elem);
+            }
+        }
+
+        function showError() {
+            $("#phonebook").append($('<li>').text('ERROR'));
+        }
+
+        function deleteContact(key) {
+            let deleteRequest = {
+                method: "DELETE",
+                url: `https://phonebook-nakov.firebaseio.com/phonebook/${key}.json`,
+                success: loadBook,
+                error: showError
+            };
+
+            $.ajax(deleteRequest);
+        }
+    })
+</script>
+</body>
+</html>

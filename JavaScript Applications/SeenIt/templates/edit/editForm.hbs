@@ -1,0 +1,19 @@
+<div class="submitArea formContainer">
+    <form id="editPostForm" class="submitForm" action="#/edit/:{{currentForm._id}}" method="post">
+        <label>Link URL:</label>
+        <input name="url" type="text"
+               value="{{currentForm.url}}">
+        <label>Link Title:</label>
+        <input name="title" type="text" value="{{currentForm.title}}">
+        <label>Link Thumbnail Image (optional):</label>
+        <input name="image" type="text"
+               value="{{currentForm.imageUrl}}">
+        <label>Comment (optional):</label>
+        {{#if currentForm.description}}
+            <textarea name="description">{{currentForm.description}}</textarea>
+        {{else}}
+            <textarea name="description">No desc</textarea>
+        {{/if}}
+        <input id="btnEditPost" type="submit" value="Edit Post">
+    </form>
+</div>

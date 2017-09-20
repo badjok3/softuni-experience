@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forecatser</title>
+    <style>
+        #content {
+            width: 400px;
+        }
+
+        #request {
+            text-align: center;
+        }
+
+        .bl {
+            width: 300px;
+        }
+
+        #current {
+            text-align: center;
+            font-size: 2em;
+        }
+
+        #upcoming {
+            text-align: center;
+        }
+
+        .condition {
+            text-align: left;
+            display: inline-block;
+        }
+
+        .symbol {
+            font-size: 4em;
+            display: inline-block;
+        }
+
+        .forecast-data {
+            display: block;
+        }
+
+        .upcoming {
+            display: inline-block;
+            margin: 1.5em;
+        }
+
+        .label {
+            margin-top: 1em;
+            font-size: 1.5em;
+            background-color: aquamarine;
+            font-weight: 400;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+<div id="content">
+    <div id="request">
+        <input id="location" class='bl' type="text">
+        <input id="submit" class="bl" type="button" value="Get Weather">
+    </div>
+    <div id="forecast" style="display:none">
+        <div id="current">
+            <div class="label">Current conditions</div>
+        </div>
+        <div id="upcoming">
+            <div class="label">Three-day forecast</div>
+        </div>
+    </div>
+</div>
+<script src="forecaster.js"></script>
+<script>
+    $(function attachEvents() {
+        let symbols = {
+            "Sunny": "☀",
+            "Partly sunny": "⛅",
+            "Overcast": "☁",
+            "Rain": "☂"
+        };
+
+        $("#submit").click(showWeather);
+
+        function showWeather() {
+            $.ajax({
+                url: `https://judgetests.firebaseio.com/locations.json`,
+                success: getCity,
+                error: handleError
+            });
+        }
+
+        function getCity(cities) {
+            for (let i = 0; i < cities.length; i++) {
+                if (cities[i].name === $("#location").val()) {
+                    displayTodaysWeather(cities[i]);
+                    displayThreeDaysForecast(cities[i]);
+                }
+            }
+        }
+
+        function displayTodaysWeather(city) {
+            $.get(`https://judgetests.firebaseio.com/forecast/today/${city.code}.json`)
+                .then((forecast) => {
+                    let currentConditions = $("<div>")
+                        .addClass('label')
+                        .text('Current conditions');
+                    let sybmol = $("<span>")
+                        .text(symbols[forecast['forecast']['condition']])
+                        .addClass('condition symbol');
+                    $("#forecast").css('display', 'block');
+                    $("#current").empty();
+
+                    let condition = $("<span>").addClass('condition');
+                    condition.append($("<span>").addClass('forecast-data').text(forecast.name));
+                    condition.append($("<span>").addClass('forecast-data').text(`${forecast['forecast']['low']}°/${forecast['forecast']['high']}°`));
+                    condition.append($("<span>").addClass('forecast-data').text(forecast['forecast']['condition']));
+
+                    $("#current").append(currentConditions)
+                        .append(sybmol)
+                        .append(condition);
+                })
+                .catch(handleError);
+        }
+
+        function displayThreeDaysForecast(city) {
+            $.get(`https://judgetests.firebaseio.com/forecast/upcoming/${city.code}.json`)
+                .then((forecast) => {
+                    $("#upcoming").empty();
+                    $("#upcoming").append($("<div>")
+                        .addClass('label')
+                        .text('Three-day forecast'));
+
+                    for(let elem in forecast['forecast']) {
+                        displayThreeDays(forecast['forecast'][elem]);
+                    }
+                });
+
+            function displayThreeDays(forecast) {
+                let symbol = $("<span>")
+                    .text(symbols[forecast['condition']])
+                    .addClass('symbol');
+
+                let upcoming = $("<span>").addClass('upcoming');
+                upcoming.append(symbol);
+                upcoming.append($("<span>").addClass('forecast-data').text(`${forecast['low']}°/${forecast['high']}°`));
+                upcoming.append($("<span>").addClass('forecast-data').text(forecast['condition']));
+
+                $("#upcoming").append(upcoming);
+            }
+        }
+
+        function handleError(err) {
+            $("#current").empty();
+            $("#current").append($("<div>")
+                .addClass('label')
+                .text(err.status + `:` + err.statusText));
+        }
+    });
+</script>
+</body>
+</html>

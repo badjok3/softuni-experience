@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+<h1>All Posts</h1>
+<button id="btnLoadPosts">Load Posts</button>
+<select id="posts"></select>
+<button id="btnViewPost">View</button>
+<h1 id="post-title">Post Details</h1>
+<ul id="post-body"></ul>
+<h2>Comments</h2>
+<ul id="post-comments"></ul>
+<script>
+    $(function attachEvents() {
+        const baseUrl = 'https://baas.kinvey.com/appdata/kid_r18Te1aUb/';
+        const authHeader = {
+            'Authorization': 'Basic ' + btoa('gesha:pass'),
+            'Content-type': 'application/json'
+        };
+
+        $("#btnLoadPosts").click(loadPosts);
+        $("#btnViewPost").click(viewPosts);
+
+        function loadPosts() {
+            $.ajax({
+                method: "GET",
+                url: baseUrl + `posts`,
+                headers: authHeader,
+                success: fillSelect
+            });
+        }
+
+        function fillSelect(posts) {
+            $("#posts").empty();
+            for (let post of posts) {
+                $("#posts").append($("<option>").text(post.title).val(post._id));
+            }
+        }
+
+        function handleError(err) {
+            alert(err.statusText);
+        }
+
+        function viewPosts() {
+            let selected = $("#posts option:selected").val();
+            $.ajax({
+                method: 'GET',
+                url: baseUrl + 'posts/' + selected,
+                headers: authHeader,
+            }).then((data) => {
+                $("#post-title").text(data.title);
+                $("#post-body").text(data.body);
+                $.ajax({
+                    method: 'GET',
+                    url: baseUrl + `comments/?query={"post_id":"${data._id}"}`,
+                    headers: authHeader,
+                }).then((commentsData) => {
+                    $("#post-comments").empty();
+                    for (let i = 0; i < commentsData.length; i++) {
+                        $("#post-comments").append($(`<li>${commentsData[i].text}</li>`));
+                    }
+                }).catch(handleError);
+            }).catch(handleError);
+        }
+    });
+</script>
+</body>
+</html>

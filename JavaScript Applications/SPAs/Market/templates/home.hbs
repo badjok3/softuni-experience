@@ -1,0 +1,12 @@
+{{#if isLogged}}
+    <section id="viewUserHome">
+        <h1 id="viewUserHomeHeading">Welcome, {{user}}!</h1>
+        <a href="#/shop" id="linkUserHomeShop">Shop</a>
+        <a href="#/cart" id="linkUserHomeCart">Cart</a>
+    </section>
+{{else}}
+    <section id="viewAppHome">
+        <h1>Welcome</h1>
+        Welcome to our shopping system.
+    </section>
+{{/if}}

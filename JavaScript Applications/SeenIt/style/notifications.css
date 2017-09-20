@@ -1,0 +1,28 @@
+#notifications {
+    float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+    margin: 1em;
+}
+.notification {
+    padding:  0.5em 2em 0.5em 2em;
+    border-radius: 10px;
+    font-size: 1.5em;
+    color: #ffffff;
+    display: none;
+    text-align: right;
+}
+
+
+
+#loadingBox {
+    background-color: #7CB3E9;
+}
+#infoBox {
+    background-color: #228B22;
+}
+#errorBox {
+    background-color: #F08012;
+}
