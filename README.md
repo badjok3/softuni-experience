@@ -53,7 +53,7 @@
 
 <h2>JavaScript Applications</h2>
 01.<a href="https://github.com/badjok3/creative-title/tree/master/JavaScript%20Applications/AJAX%20%26%20jQuery%20AJAX"> AJAX & jQuery AJAX </a>- 25.07.2017<br>
-02.<a href="https://github.com/badjok3/creative-title/tree/master/JavaScript%20Applications/AJAX%20%26%20jQuery%20AJAX%20Exercises">Exercises: AJAX & jQuery AJAX </a> - 27.07.2017<br>
+02.<a href="https://github.com/badjok3/creative-title/tree/master/JavaScript%20Applications/AJAX%20%26%20jQuery%20AJAX%20Exercises"> Exercises: AJAX & jQuery AJAX </a> - 27.07.2017<br>
 03.<a href="https://github.com/badjok3/creative-title/tree/master/JavaScript%20Applications/Async%20Programming"> Asynchronous Programming </a> - 28.07.2017<br>
 04.<a href="https://github.com/badjok3/creative-title/tree/master/JavaScript%20Applications/Async%20Programming%20Exercises"> Exercises: Asynchrounous Programming </a> - 31.07.2017<br>
 05.<a href="https://github.com/badjok3/creative-title/tree/master/JavaScript%20Applications/Single%20Page%20Apps%20with%20AJAX%2C%20REST%20and%20Kinvey/Prodavachnik"> Single Page Apps with AJAX, REST and Kinvey </a> - 01.08.2017<br>
