@@ -50,3 +50,14 @@
 13.<a href="https://github.com/badjok3/creative-title/tree/master/JavaScript%20Advanced/13.JS%20Classes%20Exercise"> Exercises: JS Classes </a> - (<a href="https://github.com/badjok3/creative-title/blob/master/JavaScript%20Advanced/13.JS%20Classes%20Exercise/README.md">assignment</a>) - 10.07.2017<br>
 14.<a href="https://github.com/badjok3/creative-title/tree/master/JavaScript%20Advanced/14.Class%20Inheritance%20and%20Prototypes"> Class Inheritance and Prototypes </a> - (<a href="https://github.com/badjok3/creative-title/blob/master/JavaScript%20Advanced/14.Class%20Inheritance%20and%20Prototypes/README.md">assignment</a>) - 11.07.2017<br>
 15.<a href="https://github.com/badjok3/creative-title/tree/master/JavaScript%20Advanced/15.Prototype%20Chain"> Exercises: Class Inheritance and Prototypes </a> - (<a href="https://github.com/badjok3/creative-title/blob/master/JavaScript%20Advanced/15.Prototype%20Chain/README.md">assignment</a>) - 13.07.2017<br>
+
+<h2>JavaScript Applications</h2>
+1.<a href="https://github.com/badjok3/creative-title/tree/master/JavaScript%20Applications/AJAX%20%26%20jQuery%20AJAX"> AJAX & jQuery AJAX </a>- 25.07.2017<br>
+2.<a href="https://github.com/badjok3/creative-title/tree/master/JavaScript%20Applications/AJAX%20%26%20jQuery%20AJAX%20Exercises"> Exercises: AJAX & jQuery AJAX </a> - 27.07.2017<br>
+3.<a href="https://github.com/badjok3/creative-title/tree/master/JavaScript%20Applications/Async%20Programming"> Asynchronous Programming </a> - 28.07.2017<br>
+4.<a href="https://github.com/badjok3/creative-title/tree/master/JavaScript%20Applications/Async%20Programming%20Exercises"> Exercises: Asynchrounous Programming </a> - 31.07.2017<br>
+5.<a href="https://github.com/badjok3/creative-title/tree/master/JavaScript%20Applications/Single%20Page%20Apps%20with%20AJAX%2C%20REST%20and%20Kinvey/Prodavachnik"> Single Page Apps with AJAX, REST and Kinvey </a> - 01.08.2017<br>
+6.<a href="https://github.com/badjok3/creative-title/tree/master/JavaScript%20Applications/SPAs"> Exercises: Single Page Applications </a> - 03.08.2017<br>
+7.<a href="https://github.com/badjok3/creative-title/tree/master/JavaScript%20Applications/Templating"> Templating </a> - 04.08.2017<br>
+8.<a href="https://github.com/badjok3/creative-title/tree/master/JavaScript%20Applications/Patterns%20and%20Routing/Team-Manager"> Patterns and Routing </a> - 08.08.2017<br>
+9.<a href="https://github.com/badjok3/creative-title/tree/master/JavaScript%20Applications/SeenIt"> Seen It SPA </a>
